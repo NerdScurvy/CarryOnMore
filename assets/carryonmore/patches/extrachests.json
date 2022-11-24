@@ -1,0 +1,65 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "file": "extrachests:blocktypes/chests",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.0625,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "slots": {
+          "Hands": {}
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "extrachests"
+      } 
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "file": "extrachests:blocktypes/labeledchests",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.0625,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "extrachests"
+      }      
+    ]
+  }
+]

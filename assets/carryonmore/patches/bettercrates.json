@@ -1,0 +1,64 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "file": "bettercrates:blocktypes/bettercrates",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.0625,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "slots": {
+          "Hands": {}
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bettercrates"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "file": "bettercrates:blocktypes/bettercrates2sided",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.0625,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "slots": {
+          "Hands": {}
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bettercrates"
+      }
+    ]
+  }
+]
