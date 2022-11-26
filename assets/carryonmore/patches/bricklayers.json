@@ -98,7 +98,7 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "scale": 0.6,
+        "scale": 0.6
       }
     },
     "file": "bricklayers:blocktypes/clay/planterglazed",
