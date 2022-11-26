@@ -1,0 +1,280 @@
+[
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "interactDelay": 0.5,
+        "translation": [
+          0.0625,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "slots": {
+          "Hands": {}
+        }
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/toolmoldcolored",
+    "side": "Server",
+    "condition": {
+      "when": "carryon:MoldsEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/plantercolored",
+    "side": "Server",
+    "slots": {
+      "Hands": {},
+      "Back": {}
+    },
+    "condition": {
+      "when": "carryon:PlanterEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/planterglazed_salt",
+    "side": "Server",
+    "slots": {
+      "Hands": {},
+      "Back": {}
+    },
+    "condition": {
+      "when": "carryon:PlanterEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6,
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/planterglazed",
+    "side": "Server",
+    "slots": {
+      "Hands": {},
+      "Back": {}
+    },
+    "condition": {
+      "when": "carryon:PlanterEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          -0.125,
+          0,
+          0
+        ]
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/storagevesselcolored_planter",
+    "side": "Server",
+    "slots": {
+      "Hands": {},
+      "Back": {}
+    },
+    "condition": {
+      "when": "carryon:PlanterEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          -0.125,
+          0,
+          0
+        ]
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/storagevesselcolored",
+    "side": "Server",
+    "slots": {
+      "Hands": {},
+      "Back": {}
+    },
+    "condition": {
+      "when": "carryon:StorageVesselEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.3175,
+          0.1,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": 1,
+        "slots": {
+          "Hands": {
+            "animation": "carryon:holdlight"
+          },
+          "Back": {}
+        }
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/flowerpotcolored",
+    "condition": {
+      "when": "carryon:FlowerpotEnabled",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.3175,
+          0.1,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": 1,
+        "slots": {
+          "Hands": {
+            "animation": "carryon:holdlight"
+          },
+          "Back": {}
+        }
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/flowerpotglazed_salt",
+    "condition": {
+      "when": "carryon:FlowerpotEnabled",
+      "isValue": "true"
+    }
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "translation": [
+          0.3175,
+          0.1,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": 1,
+        "slots": {
+          "Hands": {
+            "animation": "carryon:holdlight"
+          },
+          "Back": {}
+        }
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/flowerpotglazed",
+    "condition": {
+      "when": "carryon:FlowerpotEnabled",
+      "isValue": "true"
+    }
+  }
+]
