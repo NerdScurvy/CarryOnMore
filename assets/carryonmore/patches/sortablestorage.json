@@ -23,6 +23,10 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:ChestEnabled",
+      "isValue": "true"
+    },
     "dependsOn": [
       {
         "modid": "carryon"
@@ -68,7 +72,7 @@
         "modid": "sortablestorage"
       }
     ]
-  },  
+  },
   {
     "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
     "side": "server",
@@ -92,6 +96,10 @@
           "Back": {}
         }
       }
+    },
+    "condition": {
+      "when": "carryon:ChestEnabled",
+      "isValue": "true"
     },
     "dependsOn": [
       {
@@ -133,6 +141,10 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:StationaryBasketEnabled",
+      "isValue": "true"
+    },
     "dependsOn": [
       {
         "modid": "carryon"
@@ -160,6 +172,10 @@
           "Back": {}
         }
       }
+    },
+    "condition": {
+      "when": "carryon:StorageVesselEnabled",
+      "isValue": "true"
     },
     "dependsOn": [
       {

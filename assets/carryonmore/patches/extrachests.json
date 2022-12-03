@@ -3,6 +3,7 @@
     "op": "add",
     "path": "/behaviors/-",
     "file": "extrachests:blocktypes/chests",
+    "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
@@ -21,19 +22,24 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:ChestEnabled",
+      "isValue": "true"
+    },
     "dependsOn": [
       {
         "modid": "carryon"
       },
       {
         "modid": "extrachests"
-      } 
+      }
     ]
   },
   {
     "op": "add",
     "path": "/behaviors/-",
     "file": "extrachests:blocktypes/labeledchests",
+    "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
@@ -53,13 +59,17 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:ChestEnabled",
+      "isValue": "true"
+    },
     "dependsOn": [
       {
         "modid": "carryon"
       },
       {
         "modid": "extrachests"
-      }      
+      }
     ]
   }
 ]

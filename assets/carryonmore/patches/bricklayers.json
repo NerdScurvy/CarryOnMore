@@ -42,15 +42,15 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "scale": 0.6
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
       }
     },
     "file": "bricklayers:blocktypes/clay/plantercolored",
     "side": "Server",
-    "slots": {
-      "Hands": {},
-      "Back": {}
-    },
     "condition": {
       "when": "carryon:PlanterEnabled",
       "isValue": "true"
@@ -70,15 +70,15 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "scale": 0.6
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
       }
     },
     "file": "bricklayers:blocktypes/clay/planterglazed_salt",
     "side": "Server",
-    "slots": {
-      "Hands": {},
-      "Back": {}
-    },
     "condition": {
       "when": "carryon:PlanterEnabled",
       "isValue": "true"
@@ -98,15 +98,15 @@
     "value": {
       "name": "Carryable",
       "properties": {
-        "scale": 0.6
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
       }
     },
     "file": "bricklayers:blocktypes/clay/planterglazed",
     "side": "Server",
-    "slots": {
-      "Hands": {},
-      "Back": {}
-    },
     "condition": {
       "when": "carryon:PlanterEnabled",
       "isValue": "true"
@@ -130,15 +130,15 @@
           -0.125,
           0,
           0
-        ]
+        ],
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
       }
     },
     "file": "bricklayers:blocktypes/clay/storagevesselcolored_planter",
     "side": "Server",
-    "slots": {
-      "Hands": {},
-      "Back": {}
-    },
     "condition": {
       "when": "carryon:PlanterEnabled",
       "isValue": "true"
@@ -162,15 +162,15 @@
           -0.125,
           0,
           0
-        ]
+        ],
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
       }
     },
     "file": "bricklayers:blocktypes/clay/storagevesselcolored",
     "side": "Server",
-    "slots": {
-      "Hands": {},
-      "Back": {}
-    },
     "condition": {
       "when": "carryon:StorageVesselEnabled",
       "isValue": "true"
@@ -210,10 +210,19 @@
       }
     },
     "file": "bricklayers:blocktypes/clay/flowerpotcolored",
+    "side": "Server",
     "condition": {
       "when": "carryon:FlowerpotEnabled",
       "isValue": "true"
-    }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
   },
   {
     "op": "add",
@@ -241,10 +250,19 @@
       }
     },
     "file": "bricklayers:blocktypes/clay/flowerpotglazed_salt",
+    "side": "Server",
     "condition": {
       "when": "carryon:FlowerpotEnabled",
       "isValue": "true"
-    }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
   },
   {
     "op": "add",
@@ -272,9 +290,102 @@
       }
     },
     "file": "bricklayers:blocktypes/clay/flowerpotglazed",
+    "side": "Server",
     "condition": {
       "when": "carryon:FlowerpotEnabled",
       "isValue": "true"
-    }
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/vat_planter_small_colored.json",
+    "side": "Server",
+    "condition": {
+      "when": "carryon:PlanterEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/vat_liquid_small_colored.json",
+    "side": "Server",
+    "condition": {
+      "when": "carryon:StorageVesselEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "Carryable",
+      "properties": {
+        "scale": 0.6,
+        "slots": {
+          "Hands": {},
+          "Back": {}
+        }        
+      }
+    },
+    "file": "bricklayers:blocktypes/clay/vat_small_colored.json",
+    "side": "Server",
+    "condition": {
+      "when": "carryon:StorageVesselEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "bricklayers"
+      }
+    ]
   }
 ]

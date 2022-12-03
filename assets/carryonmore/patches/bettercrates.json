@@ -3,6 +3,7 @@
     "op": "add",
     "path": "/behaviors/-",
     "file": "bettercrates:blocktypes/bettercrates",
+    "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
@@ -21,6 +22,10 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:CrateEnabled",
+      "isValue": "true"
+    },    
     "dependsOn": [
       {
         "modid": "carryon"
@@ -34,6 +39,7 @@
     "op": "add",
     "path": "/behaviors/-",
     "file": "bettercrates:blocktypes/bettercrates2sided",
+    "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
@@ -52,6 +58,10 @@
         }
       }
     },
+    "condition": {
+      "when": "carryon:CrateEnabled",
+      "isValue": "true"
+    },    
     "dependsOn": [
       {
         "modid": "carryon"
