@@ -2,11 +2,12 @@
   {
     "op": "add",
     "path": "/behaviors/-",
-    "file": "bettercrates:blocktypes/bettercrates",
+    "file": "extrachests:blocktypes/chests",
     "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
+        "override": true,
         "translation": [
           0.0625,
           0,
@@ -18,31 +19,33 @@
           0
         ],
         "slots": {
-          "Hands": {}
+          "Hands": {},
+          "Back": {}
         }
       }
     },
     "condition": {
-      "when": "carryon:CrateEnabled",
+      "when": "carryonmore:AllowExtraChestsOnBack",
       "isValue": "true"
-    },    
+    },
     "dependsOn": [
       {
         "modid": "carryon"
       },
       {
-        "modid": "bettercrates"
+        "modid": "extrachests"
       }
     ]
   },
   {
     "op": "add",
     "path": "/behaviors/-",
-    "file": "bettercrates:blocktypes/bettercrates2sided",
+    "file": "extrachests:blocktypes/labeledchests",
     "side": "Server",
     "value": {
       "name": "Carryable",
       "properties": {
+        "override": true,
         "translation": [
           0.0625,
           0,
@@ -54,20 +57,21 @@
           0
         ],
         "slots": {
-          "Hands": {}
+          "Hands": {},
+          "Back": {}
         }
       }
     },
     "condition": {
-      "when": "carryon:CrateEnabled",
+      "when": "carryonmore:AllowExtraChestsOnBack",
       "isValue": "true"
-    },    
+    },
     "dependsOn": [
       {
         "modid": "carryon"
       },
       {
-        "modid": "bettercrates"
+        "modid": "extrachests"
       }
     ]
   }
