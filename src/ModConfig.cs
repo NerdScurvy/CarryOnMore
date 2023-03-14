@@ -1,3 +1,4 @@
+using System;
 using Vintagestory.API.Common;
 
 namespace CarryOnMore
@@ -10,31 +11,29 @@ namespace CarryOnMore
 
         public static void ReadConfig(ICoreAPI api)
         {
-            if (api.Side != EnumAppSide.Server)
+            if (api.Side == EnumAppSide.Server)
             {
-                return;
-            }
-
-            try
-            {
-                ServerConfig = LoadConfig(api);
-
-                if (ServerConfig == null)
+                try
                 {
+                    ServerConfig = LoadConfig(api);
+
+                    if (ServerConfig == null)
+                    {
+                        GenerateConfig(api);
+                        ServerConfig = LoadConfig(api);
+                    }
+                    else
+                    {
+                        GenerateConfig(api, ServerConfig);
+                    }
+                }
+                catch (Exception e)
+                {
+                    api.Logger.Warning($"Config file '{ConfigFile}': {e.Message}");
                     GenerateConfig(api);
                     ServerConfig = LoadConfig(api);
                 }
-                else
-                {
-                    GenerateConfig(api, ServerConfig);
-                }
             }
-            catch
-            {
-                GenerateConfig(api);
-                ServerConfig = LoadConfig(api);
-            }
-
             var worldConfig = api.World.Config;
 
             worldConfig.SetBool(CarryMoreSystem.ModId + ":AllowExtraChestsOnBack", ServerConfig.AllowExtraChestsOnBack);
