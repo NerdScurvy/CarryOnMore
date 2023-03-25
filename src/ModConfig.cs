@@ -11,32 +11,30 @@ namespace CarryOnMore
 
         public static void ReadConfig(ICoreAPI api)
         {
-            if (api.Side == EnumAppSide.Server)
-            {
-                try
-                {
-                    ServerConfig = LoadConfig(api);
+            if (api.Side != EnumAppSide.Server) return;
 
-                    if (ServerConfig == null)
-                    {
-                        GenerateConfig(api);
-                        ServerConfig = LoadConfig(api);
-                    }
-                    else
-                    {
-                        GenerateConfig(api, ServerConfig);
-                    }
-                }
-                catch (Exception e)
+            try
+            {
+                ServerConfig = LoadConfig(api);
+
+                if (ServerConfig == null)
                 {
-                    api.Logger.Warning($"Config file '{ConfigFile}': {e.Message}");
                     GenerateConfig(api);
                     ServerConfig = LoadConfig(api);
                 }
+                else
+                {
+                    GenerateConfig(api, ServerConfig);
+                }
             }
-            var worldConfig = api.World.Config;
+            catch (Exception e)
+            {
+                api.Logger.Warning($"Config file '{ConfigFile}': {e.Message}");
+                GenerateConfig(api);
+                ServerConfig = LoadConfig(api);
+            }
 
-            worldConfig.SetBool(CarryMoreSystem.ModId + ":AllowExtraChestsOnBack", ServerConfig.AllowExtraChestsOnBack);
+            api.World.Config.SetBool(CarryMoreSystem.ModId + ":AllowExtraChestsOnBack", ServerConfig.AllowExtraChestsOnBack);
         }
 
         private static CarryOnMoreConfig LoadConfig(ICoreAPI api)
