@@ -185,5 +185,112 @@
         "modid": "sortablestorage"
       }
     ]
-  }
+  },
+
+
+  {
+    "file": "sortablestorage:blocktypes/wood/chestsortable.json",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "sortablestorage"
+      }
+    ]
+  },
+  {
+    "file": "sortablestorage:blocktypes/wood/chestsortable-trunk.json",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "sortablestorage"
+      }
+    ]
+  },
+  {
+    "file": "sortablestorage:blocktypes/wood/chestsortable-labeled.json",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "sortablestorage"
+      }
+    ]
+  },
+  {
+    "file": "sortablestorage:blocktypes/stationarybasketsortable.json",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "sortablestorage"
+      }
+    ]
+  },
+  {
+    "file": "sortablestorage:blocktypes/clay/storagevesselsortable.json",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviorsByType/*/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "sortablestorage"
+      }
+    ]
+  } 
 ]

@@ -74,5 +74,51 @@
         "modid": "extrachests"
       }
     ]
+  },
+
+
+  {
+    "file": "extrachests:blocktypes/chests",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "extrachests"
+      }
+    ]    
+  },
+  {
+    "file": "extrachests:blocktypes/labeledchests",
+    "side": "Server",
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "CarryableInteract"
+    },
+    "condition": {
+      "when": "carryon:InteractStorageEnabled",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "carryon"
+      },
+      {
+        "modid": "extrachests"
+      }
+    ]    
   }
+
+  
 ]
